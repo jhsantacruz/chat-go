@@ -29,7 +29,7 @@ class ChannelList extends React.Component{
   }
 }
 
-
+// Render a form with a text input
 class ChannelForm extends React.Component{
   render(){
     return(
@@ -40,5 +40,16 @@ class ChannelForm extends React.Component{
   }
 }
 
-ReactDOM.render(<ChannelList channels={channels} />,
+class ChannelSection extends React.Component{
+  render(){
+    return(
+      <div>
+        <ChannelList channels={channels} />
+        <ChannelForm />
+      </div>
+    )
+  }
+}
+
+ReactDOM.render(<ChannelSection />,
   document.getElementById("app"));
